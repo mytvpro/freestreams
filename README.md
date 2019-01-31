@@ -10,4 +10,4 @@ The following addons are available here:
 - [__Hello World__](master/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``456fa67``](https://github.com/mytvpro/freestreams/commit/456fa671bcebcf8d5d1ea6cd07c43592280e1452)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``243828f``](https://github.com/mytvpro/freestreams/commit/243828f39353dc6dd8e7cb5f41db3c2c6e9af60e)
