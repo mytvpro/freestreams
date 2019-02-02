@@ -6,8 +6,8 @@ The following addons are available here:
 
 [__master__](master/addons.xml) (Kodi ver. 17.0.0):
 
-- [__tvpro__](master/datadir/plugin.video.tvpro/plugin.video.tvpro-1.0.3.zip) plugin.video.tvpro v1.0.3
+- [__tvpro__](master/datadir/plugin.video.tvpro/plugin.video.tvpro-1.0.4.zip) plugin.video.tvpro v1.0.4
 - [__mytvpro/tvpro Repository__](master/datadir/repository.mytvpro.tvpro/repository.mytvpro.tvpro-1.0.2.zip) repository.mytvpro.tvpro v1.0.2
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``5a63a31``](https://github.com/mytvpro/tvpro/commit/5a63a312b3ec0664f2f0361c4da7554b3ac5d96a)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``015b1ad``](https://github.com/mytvpro/tvpro/commit/015b1ada1024f834bf6a092ba04985cb6a15df05)
