@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.0.2">
+<addons><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.0.3">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
 	<import addon="script.module.requests" />
@@ -10,9 +10,9 @@
 
   <extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-    <summary lang="en">[COLOR darkgrey]tvpro[/COLOR]</summary>
+    <summary lang="en">[COLOR darkblue]tvpro[/COLOR]</summary>
     <language>en</language>
-    <description lang="en">[COLOR darkgrey]tvpro[/COLOR] Official Addon - High Quality and Stable Streams - for more info go to [COLOR yellowgreen]tvstreams.xyz[/COLOR]</description>
+    <description lang="en">[COLOR darkblue]tvpro[/COLOR] Official Addon - High Quality and Stable Streams - for more info go to [COLOR yellowgreen]tvstreams.xyz[/COLOR]</description>
     <license />
 		<language />
 		<forum>https://t.me/joinchat/F1aXAU9UxtzZ3cl4885Pjw</forum>

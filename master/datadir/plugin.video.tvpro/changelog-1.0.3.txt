@@ -1,0 +1,8 @@
+[B]Version 1.0.3[/B]
+- fixed some branding
+
+[B]Version 1.0.2[/B]
+- Fix addon id typo 
+
+[B]Version 1.0.1[/B]
+- Initial Release
