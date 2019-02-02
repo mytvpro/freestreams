@@ -8,7 +8,7 @@ import difflib
 #################################
 
 #############Defined Strings#############
-addon_id     = 'plugin.video.tvpro-prvguide'
+addon_id     = 'plugin.video.tvpro-pvrguide'
 selfAddon    = xbmcaddon.Addon(id=addon_id)
 icon         = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 fanart       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
