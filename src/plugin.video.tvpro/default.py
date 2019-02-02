@@ -229,13 +229,14 @@ def start():
 			tools.addDir('[COLOR gray]Live TV[/COLOR]','live',1,icon,fanart,'')
 			if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
 				tools.addDir('[COLOR white]TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-			#if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-				#tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+			if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+				tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
 			tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
-			tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
-			tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
+            tools.addDir('[COLOR white]test tV series[/COLOR]','vod',3,vodtv,fanart,'')
+			#tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
+			#tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
 			tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
-			#tools.addDir('[COLOR white]Search VOD[/COLOR]','url',43,icon,fanart,'')
+			tools.addDir('[COLOR white]tes Search VOD[/COLOR]','url',43,icon,fanart,'')
 			tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
 			#tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
 			tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
@@ -252,20 +253,22 @@ def home():
 	tools.addDir('[COLOR gray]Live TV[/COLOR]','live',1,icon,fanart,'')
 	if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
 		tools.addDir('[COLOR white]TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-	#if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-		#tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+	if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+		tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
 	tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
-	tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
-	tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
+    tools.addDir('[COLOR white]test tV series[/COLOR]','vod',3,vodtv,fanart,'')
+	#tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
+	#tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
 	tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
-	#tools.addDir('[COLOR white]Search VOD[/COLOR]','url',43,icon,fanart,'')
+	tools.addDir('[COLOR white]test Search VOD[/COLOR]','url',43,icon,fanart,'')
 	tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
 	#tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
 	tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
 	tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
 	tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
 	
-	#tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
+[B]Version 1.0.1[/B]
+- Initial Release#tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
 	plugintools.set_view( plugintools.LIST )
 	setView()
 	
