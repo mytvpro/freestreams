@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.tvpro"
        name="tvpro"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="tvpro">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -20,7 +20,7 @@
     <license></license>
 		<language></language>
 		<forum>https://t.me/joinchat/F1aXAU9UxtzZ3cl4885Pjw</forum>
-		<source>kodi.mytvpro.org</source>
+		<source>https://kodi.mytvpro.org/</source>
 		<website>tvstreams.xyz</website>
 		<email>hosting@tvstreams.xyz</email>
 		<assets>
