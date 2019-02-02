@@ -28,7 +28,7 @@
 		</assets>
 		<news>Updated the addon to use new addon.xml metadata</news>
   </extension>
-</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.1">
+</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.2">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
