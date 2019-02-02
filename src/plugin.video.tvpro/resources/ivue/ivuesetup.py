@@ -30,9 +30,9 @@ from resources.modules import tools
 username     =  control.setting('Username')
 password     =  control.setting('Password')
 USERDATA     =  xbmc.translatePath(os.path.join('special://home/userdata',''))
-ini          =  xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue','addons_index.ini'))
-tvproini          =  xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue','addons2.ini.ini'))
-inizip       = 	xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue','addons_index.zip'))
+ini          =  xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue','addons_index.ini'))
+tvproini          =  xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue','addons2.ini.ini'))
+inizip       = 	xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue','addons_index.zip'))
 tmpini       =  xbmc.translatePath(os.path.join('special://home/userdata',''))
 ivuetarget   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/'))
 ivueaddons2ini   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/addons2.ini'))
@@ -41,8 +41,8 @@ ivuecreateini   =  xbmc.translatePath(os.path.join('special://home/userdata/addo
 ivuecreateini2   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/plugin.video.IVUEcreator/custom_channels.ini'))
 iVue_SETTINGS = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide','settings.xml'))
 UseriVueSets = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide','oldsettings.xml'))
-iVueSet = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue','ivuesettings.xml'))
-iVueFold = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue'))
+iVueSet = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue','ivuesettings.xml'))
+iVueFold = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue'))
 iVue_DATA = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/'))
 
 V_tvproskinpath = xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/resources/skins/'))
@@ -113,7 +113,7 @@ if shifttime == "23":
 
 def iVueInt2():
 	xbmc.executebuiltin("XBMC.ActivateWindow(Home)")
-	xbmc.executebuiltin('RunAddon(plugin.video.tvproPVR)')
+	xbmc.executebuiltin('RunAddon(plugin.video.tvpro)')
 	xbmc.executebuiltin("ActivateWindow(busydialog)")
 	dp = xbmcgui.DialogProgress()
 	dp.create("[COLOR darkgrey]tvpro[/COLOR]","Setting up iVue",'', 'Please Wait')
@@ -148,7 +148,7 @@ def iVueInt2():
 		
 	dp.create("[COLOR darkgrey]tvpro[/COLOR]","Adding Information",'', 'Please Wait')
 	a = open(V_tvproaddons2ini).read()
-	b = a.replace('<tvproPVRUN>',username).replace('<tvproPVRPW>',password)
+	b = a.replace('<tvproUN>',username).replace('<tvproPW>',password)
 	f = open(V_tvproaddons2ini, mode='w')
 	f.write(str(b))
 	f.close()
@@ -176,7 +176,7 @@ def iVueInt2():
 
 def iVueInt():
 	xbmc.executebuiltin("XBMC.ActivateWindow(Home)")
-	xbmc.executebuiltin('RunAddon(plugin.video.tvproPVR)')
+	xbmc.executebuiltin('RunAddon(plugin.video.tvpro)')
 	xbmc.executebuiltin("ActivateWindow(busydialog)")
 	dp = xbmcgui.DialogProgress()
 	dp.create("[COLOR darkgrey]tvpro[/COLOR]","Copying ini",'', 'Please Wait')
@@ -193,7 +193,7 @@ def iVueInt():
 	
 	
 	a = open(ivuecreateini).read()
-	b = a.replace('<tvproPVRUN>',username).replace('<tvproPVRPW>',password)
+	b = a.replace('<tvproUN>',username).replace('<tvproPW>',password)
 	f = open(ivuecreateini, mode='w')
 	f.write(str(b))
 	f.close()
@@ -280,7 +280,7 @@ def tvproskin_install(name,url):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
     dp.create("[COLOR darkgrey]tvpro[/COLOR]","Installing Skin...",'', 'Please Wait')
-    lib=os.path.join(path, 'tvproPVR.zip')
+    lib=os.path.join(path, 'tvpro.zip')
     try:
        os.remove(lib)
     except:

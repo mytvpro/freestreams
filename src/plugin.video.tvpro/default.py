@@ -8,7 +8,7 @@ import difflib
 #################################
 
 #############Defined Strings#############
-addon_id     = 'plugin.video.tvproPVR'
+addon_id     = 'plugin.video.tvpro'
 selfAddon    = xbmcaddon.Addon(id=addon_id)
 icon         = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 fanart       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
@@ -167,18 +167,18 @@ SKY_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_
 BT_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_id=1526'%(host,port,username,password)
 BBC_RED_BUTTON_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_id=1527'%(host,port,username,password)
 
-Guide = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/catchup', 'guide.xml'))
-GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/catchup', 'g'))
+Guide = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'guide.xml'))
+GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'g'))
 
 advanced_settings           =  xbmc.translatePath('special://home/addons/'+addon_id+'/resources/advanced_settings')
 advanced_settings_target    =  xbmc.translatePath(os.path.join('special://home/userdata','advancedsettings.xml'))
 
 USER_DATA     =  xbmc.translatePath(os.path.join('special://home/userdata',''))
 ADDON_DATA   =  xbmc.translatePath(os.path.join(USER_DATA,'addon_data'))
-tvprotvfol = xbmc.translatePath(os.path.join(ADDON_DATA,'plugin.video.tvproPVR'))
+tvprotvfol = xbmc.translatePath(os.path.join(ADDON_DATA,'plugin.video.tvpro'))
 tvprotvset = xbmc.translatePath(os.path.join(ADDON_DATA,'settings.xml'))
-ini          =  xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue','addons_index.ini'))
-inizip       = 	xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvproPVR/resources/ivue','addons_index.zip'))
+ini          =  xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue','addons_index.ini'))
+inizip       = 	xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/ivue','addons_index.zip'))
 tmpini       =  xbmc.translatePath(os.path.join('special://home/userdata',''))
 ivuetarget   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/'))
 ivueaddons2ini   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/script.ivueguide/addons2.ini'))
@@ -939,7 +939,7 @@ def addonsettings(url,description):
 		ivueint()
 
 	elif url =="ST":
-		xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.tvproPVR/resources/modules/speedtest.py")')
+		xbmc.executebuiltin('Runscript("special://home/addons/plugin.video.tvpro/resources/modules/speedtest.py")')
 	elif url =="META":
 		if 'ON' in description:
 			xbmcaddon.Addon().setSetting('meta','false')
@@ -1069,7 +1069,7 @@ def accountinfo():
 	
 def correctPVR():
 
-	addon = xbmcaddon.Addon('plugin.video.tvproPVR')
+	addon = xbmcaddon.Addon('plugin.video.tvpro')
 	username_text = addon.getSetting(id='Username')
 	password_text = addon.getSetting(id='Password')
 	jsonSetPVR = '{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"pvrmanager.enabled", "value":true},"id":1}'
@@ -1091,7 +1091,7 @@ def correctPVR():
 def ivueint():
 	ivuesetup.iVueInt()
 	xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'iVue Integration Complete')
-	xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.video.IVUEcreator/update_addon/plugin.video.tvproPVR",return)')
+	xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.video.IVUEcreator/update_addon/plugin.video.tvpro",return)')
 	xbmc.executebuiltin("XBMC.ActivateWindow(Home)")
 	
 def ivueint2():
@@ -1118,7 +1118,7 @@ def ivue_settings():
 	xbmc.executebuiltin("Addon.OpenSettings(script.ivueguide)")
 
 def tvpro_settings():
-	xbmc.executebuiltin("Addon.OpenSettings(plugin.video.tvproPVR)")
+	xbmc.executebuiltin("Addon.OpenSettings(plugin.video.tvpro)")
 
 	
 def setView():
@@ -1161,7 +1161,7 @@ def adult_settings():
 		
 
 def testarea():
-	tvstreamscat   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/plugin.video.tvproPVR/categories.db'))
+	tvstreamscat   =  xbmc.translatePath(os.path.join('special://home/userdata/addon_data/plugin.video.tvpro/categories.db'))
 	channels = []
 	
 	if os.path.isfile(tvstreamscat):
