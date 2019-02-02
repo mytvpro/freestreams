@@ -6,9 +6,9 @@ The following addons are available here:
 
 [__master__](master/addons.xml) (Kodi ver. 17.0.0):
 
-- [__[COLOR darkgrey]tvpro[/COLOR]__](master/datadir/plugin.video.tvkings2/plugin.video.tvkings2-1.0.1.zip) plugin.video.tvkings2 v1.0.1
+- [__tvpro__](master/datadir/plugin.video.tvpro-pvrguide/plugin.video.tvpro-pvrguide-1.0.1.zip) plugin.video.tvpro-pvrguide v1.0.1
 - [__mytvpro/tvpro Repository__](master/datadir/repository.mytvpro.tvpro/repository.mytvpro.tvpro-1.0.1.zip) repository.mytvpro.tvpro v1.0.1
 - [__Hello World__](master/datadir/script.hello.world/script.hello.world-1.0.1.zip) script.hello.world v1.0.1
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``6b39ac8``](https://github.com/mytvpro/tvpro/commit/6b39ac82f5ef1fe50b0102341be03c6ff402d423)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``0f3f75b``](https://github.com/mytvpro/tvpro/commit/0f3f75b98b27f6691d622131ba73ab182200aefb)
