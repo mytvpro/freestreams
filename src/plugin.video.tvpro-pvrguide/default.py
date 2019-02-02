@@ -12,7 +12,7 @@ addon_id     = 'plugin.video.tvpro-prvguide'
 selfAddon    = xbmcaddon.Addon(id=addon_id)
 icon         = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 fanart       = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
-search2      = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'search2.png'))
+search2      = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'search2.gif'))
 canada         = xbmc.translatePath(os.path.join('http://wizard.mancavekodi.com/tvkings/icon.png'))
 system       = xbmc.translatePath(os.path.join('http://wizard.mancavekodi.com/tvkings/icon.png'))
 eleven       = xbmc.translatePath(os.path.join('http://wizard.mancavekodi.com/tvkings/icon.png'))
