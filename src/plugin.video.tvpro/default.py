@@ -64,6 +64,7 @@ port         = '83'
 
 live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_categories'%(host,port,username,password)
 vod_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,username,password)
+series_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_series_categories'%(host,port,username,password)
 panel_api    = '%s:%s/panel_api.php?username=%s&password=%s'%(host,port,username,password)
 play_url     = '%s:%s/live/%s/%s/'%(host,port,username,password)
 
@@ -208,13 +209,13 @@ def start():
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
             line2 = "Please Re-enter" 
             line3 = "To unlock your TV PRO go to:[COLOR white] tvstreams.xyz[/COLOR]" 
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', line1, line2, line3)
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', line1, line2, line3)
             start()
         else:
             line1 = "[COLOR lime]Login Successfull![/COLOR]"
-            line2 = "Welcome to [COLOR darkgrey]tvpro[/COLOR]" 
+            line2 = "Welcome to [COLOR white]tvpro[/COLOR]" 
             line3 = ('[COLOR blue]%s[/COLOR]'%user)
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', line1, line2, line3)
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', line1, line2, line3)
             addonsettings('ADS2','')
             adult_settings()
             xbmc.executebuiltin('Container.Refresh')
@@ -223,7 +224,7 @@ def start():
         auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,username,password)
         auth = tools.OPEN_URL(auth)
         if not auth=="":
-            #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
+            #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
             tools.addDir('[COLOR white]Live TV[/COLOR]','live',1,icon,fanart,'')
             #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
             if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
@@ -236,7 +237,7 @@ def start():
             #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
             tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
             #tools.addDir('[COLOR white]tes Search VOD[/COLOR]','url',43,icon,fanart,'')
-            #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
+            #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
             #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
             tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
             tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
@@ -247,7 +248,7 @@ def start():
             plugintools.set_view( plugintools.LIST )
             setView()
 def home():
-    #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
+    #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
     tools.addDir('[COLOR white]Live TV[/COLOR]','live',1,icon,fanart,'')
     #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
@@ -260,7 +261,7 @@ def home():
     #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
     #tools.addDir('[COLOR white]test Search VOD[/COLOR]','url',43,icon,fanart,'')
-    #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
+    #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
     #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
     tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
@@ -271,7 +272,7 @@ def home():
     setView()
     
 def NEW_MENU():
-    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]LIVE TV[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
+    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]LIVE TV[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
     tools.addDir('[COLOR white]All Channels[/COLOR]',All,2,icon,fanart,'')
     tools.addDir('[COLOR white]PPV/Live Events[/COLOR]',PPV___Live_Events,25,ppv,fanart,'')
     #tools.addDir('[COLOR white]MLB[/COLOR]',MLB_Package,25,mlb,fanart,'')
@@ -294,7 +295,7 @@ def NEW_MENU():
 
     
 def US():
-    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]US LIVE[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',american,fanart,'')
+    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]US LIVE[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',american,fanart,'')
     tools.addDir('[COLOR white]US Entertainment[/COLOR]',USA_Entertainment,25,entertainment,fanart,'')
     tools.addDir('[COLOR white]US Reality[/COLOR]',USA_Reality,25,reality,fanart,'')
     tools.addDir('[COLOR white]ABC Locals[/COLOR]',ABC_LOCALS,25,networks,fanart,'')
@@ -306,7 +307,7 @@ def US():
     tools.addDir('[COLOR white]US Premium Movies[/COLOR]',USA__Movies,25,premovies,fanart,'')
     tools.addDir('[COLOR white]US Kids[/COLOR]',USA_KIDS,25,kids,fanart,'')
     tools.addDir('[COLOR white]US News[/COLOR]',USNEWS,25,newsus,fanart,'')    
-    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR] [COLOR darkgrey][B]US SPORTS[/B][/COLOR] [COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR]','','',american,fanart,'')
+    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR] [COLOR white][B]US SPORTS[/B][/COLOR] [COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR]','','',american,fanart,'')
     tools.addDir('[COLOR white]US Sports[/COLOR]',USA_Sports,25,topenglish,fanart,'')
     tools.addDir('[COLOR white]US Sports Regionals[/COLOR]',USA_SPORTS_REGIONALS,25,topenglish,fanart,'')
     tools.addDir('[COLOR white]US Fox Sports Regionals[/COLOR]',USA_FOX_SPORTS_REGIONALS,25,topenglish,fanart,'')
@@ -325,13 +326,13 @@ def US():
     setView()
     
 def UK():
-    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]UK LIVE[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',britsh,fanart,'')
+    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]UK LIVE[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',britsh,fanart,'')
     tools.addDir('[COLOR white]UK Entertainment[/COLOR]',UK_Entertainment,25,entertainment,fanart,'')
     tools.addDir('[COLOR white]UK Movies[/COLOR]',UK_Movies,25,premovies,fanart,'')
     tools.addDir('[COLOR white]UK Documentaries[/COLOR]',UK_Documentaries,25,docs,fanart,'')
     tools.addDir('[COLOR white]UK Kids[/COLOR]',UK_Kids,25,kids,fanart,'')
     tools.addDir('[COLOR white]UK News[/COLOR]',UK_News,25,newsuk,fanart,'')
-    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR] [COLOR darkgrey][B]UK SPORTS[/B][/COLOR] [COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR]','','',britsh,fanart,'')
+    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR] [COLOR white][B]UK SPORTS[/B][/COLOR] [COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR]','','',britsh,fanart,'')
     tools.addDir('[COLOR white]UK Sports[/COLOR]',UK_Sports_2,25,topenglish,fanart,'')
     tools.addDir('[COLOR white]EPL[/COLOR]',EPL_SPFL_Eleven_Sports,25,sports2,fanart,'')
     tools.addDir('[COLOR white]Sky Sports[/COLOR]',SKY_SPORTS,25,sports2,fanart,'')
@@ -343,13 +344,13 @@ def UK():
     setView()
 
 def CANADA():
-    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR darkgrey]CA LIVE[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',canada,fanart,'')
+    tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]CA LIVE[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',canada,fanart,'')
     tools.addDir('[COLOR white]CA Entertainment[/COLOR]',Canada,25,entertainment,fanart,'')
     #tools.addDir('[COLOR white]CA Extra[/COLOR]',New_Canada,25,networks,fanart,'')
     tools.addDir('[COLOR white]CA Movies[/COLOR]',Canada_Movies,25,premovies,fanart,'')
     tools.addDir('[COLOR white]CA Kids[/COLOR]',Canada_Kids,25,kids,fanart,'')
     tools.addDir('[COLOR white]CA News[/COLOR]',Canada_News,25,newsca,fanart,'')
-    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR] [COLOR darkgrey][B]CA SPORTS[/B][/COLOR] [COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR]','','',canada,fanart,'')
+    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR] [COLOR white][B]CA SPORTS[/B][/COLOR] [COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR]','','',canada,fanart,'')
     tools.addDir('[COLOR white]CA Sports[/COLOR]',Canadian_Sports,25,topenglish,fanart,'')
     tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
     tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
@@ -693,6 +694,45 @@ def vod(url):
                 url  = tools.regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
                 desc = tools.regex_from_to(a,'<description>','</description>')
                 tools.addDir(name,url,4,thumb,fanart,base64.b64decode(desc))
+
+def series(url):
+    if url =="series":
+        open = tools.OPEN_URL(vod_url)
+    else:
+        open = tools.OPEN_URL(url)
+    all_cats = tools.regex_get_all(open,'<channel>','</channel>')
+    for a in all_cats:
+        if '<playlist_url>' in open:
+            name = tools.regex_from_to(a,'<title>','</title>')
+            url1  = tools.regex_from_to(a,'<playlist_url>','</playlist_url>').replace('<![CDATA[','').replace(']]>','')
+            tools.addDir(str(base64.b64decode(name)).replace('?',''),url1,3,icon,fanart,'')
+            plugintools.set_view( plugintools.LIST )
+        else:
+            if xbmcaddon.Addon().getSetting('meta') == 'true':
+                try:
+                    name = tools.regex_from_to(a,'<title>','</title>')
+                    name = base64.b64decode(name)
+                    thumb= tools.regex_from_to(a,'<desc_image>','</desc_image>').replace('<![CDATA[','').replace(']]>','')
+                    url  = tools.regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
+                    desc = tools.regex_from_to(a,'<description>','</description>')
+                    desc = base64.b64decode(desc)
+                    plot = tools.regex_from_to(desc,'PLOT:','\n')
+                    cast = tools.regex_from_to(desc,'CAST:','\n')
+                    ratin= tools.regex_from_to(desc,'RATING:','\n')
+                    year = tools.regex_from_to(desc,'RELEASEDATE:','\n').replace(' ','-')
+                    year = re.compile('-.*?-.*?-(.*?)-',re.DOTALL).findall(year)
+                    runt = tools.regex_from_to(desc,'DURATION_SECS:','\n')
+                    genre= tools.regex_from_to(desc,'GENRE:','\n')
+                    tools.addDirMeta(str(name).replace('[/COLOR].','.[/COLOR]'),url,4,thumb,fanart,plot,str(year).replace("['","").replace("']",""),str(cast).split(),ratin,runt,genre)
+                except:pass
+                xbmcplugin.setContent(int(sys.argv[1]), 'movies')
+            else:
+                name = tools.regex_from_to(a,'<title>','</title>')
+                name = base64.b64decode(name)
+                thumb= tools.regex_from_to(a,'<desc_image>','</desc_image>').replace('<![CDATA[','').replace(']]>','')
+                url  = tools.regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
+                desc = tools.regex_from_to(a,'<description>','</description>')
+                tools.addDir(name,url,4,thumb,fanart,base64.b64decode(desc))
         
         
 ##########################################
@@ -801,7 +841,7 @@ def _pbhook(numblocks, blocksize, filesize, dp, start_time):
             dp.update(percent) 
         if dp.iscanceled():
             dialog = xbmcgui.Dialog()
-            dialog.ok("[COLOR darkgrey]tvpro[/COLOR]", 'The download was cancelled.')
+            dialog.ok("[COLOR white]tvpro[/COLOR]", 'The download was cancelled.')
                 
             sys.exit()
             dp.close()
@@ -869,7 +909,7 @@ def stream_video(url):
     
     
 def searchdialog():
-    search = control.inputDialog(heading='Search [COLOR darkgrey]tvpro[/COLOR]:')
+    search = control.inputDialog(heading='Search [COLOR white]tvpro[/COLOR]:')
     if search=="":
         return
     else:
@@ -906,39 +946,39 @@ def addonsettings(url,description):
         dialog = xbmcgui.Dialog().select('Edit Advanced Settings', ['Enable Fire TV Stick AS','Enable Fire TV AS','Enable 1GB Ram or Lower AS','Enable 2GB Ram or Higher AS','3GB Ram or Higher (Nvidia Shield) AS','Disable AS'])
         if dialog==0:
             advancedsettings('stick')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==1:
             advancedsettings('firetv')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==2:
             advancedsettings('lessthan')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==3:
             advancedsettings('morethan')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==4:
             advancedsettings('shield')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==5:
             advancedsettings('remove')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Advanced Settings Removed')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Advanced Settings Removed')
     elif url =="ADS2":
         dialog = xbmcgui.Dialog().select('Select Your Device Or Closest To', ['Fire TV Stick ','Fire TV','1GB Ram or Lower','2GB Ram or Higher','3GB Ram or Higher (Nvidia Shield)'])
         if dialog==0:
             advancedsettings('stick')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==1:
             advancedsettings('firetv')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==2:
             advancedsettings('lessthan')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==3:
             advancedsettings('morethan')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
         elif dialog==4:
             advancedsettings('shield')
-            xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'Set Advanced Settings')
+            xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'Set Advanced Settings')
     elif url =="tv":
         ivueint()
 
@@ -995,7 +1035,7 @@ def pvrsetup():
         
         
 def asettings():
-    choice = xbmcgui.Dialog().yesno('[COLOR darkgrey]tvpro[/COLOR]', 'Please Select The RAM Size of Your Device', yeslabel='Less than 1GB RAM', nolabel='More than 1GB RAM')
+    choice = xbmcgui.Dialog().yesno('[COLOR white]tvpro[/COLOR]', 'Please Select The RAM Size of Your Device', yeslabel='Less than 1GB RAM', nolabel='More than 1GB RAM')
     if choice:
         lessthan()
     else:
@@ -1058,7 +1098,7 @@ def accountinfo():
         Expired = 'Never'
     else:
         Expired = datetime.datetime.fromtimestamp(int(Expiry)).strftime('%H:%M %m/%d/%Y')
-    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=[COLOR darkgrey]tvpro[/COLOR] [COLOR white]Account Info[/COLOR][COLOR white]=-=-=-=-=-=-=-=[/COLOR]','','',icon,fanart,'')
+    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=[COLOR white]tvpro[/COLOR] [COLOR white]Account Info[/COLOR][COLOR white]=-=-=-=-=-=-=-=[/COLOR]','','',icon,fanart,'')
     tools.addDir('[COLOR white]Username :[/COLOR] '+Username,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Expire Date:[/COLOR] '+Expired,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Account Status :[/COLOR] '+Status,'','',icon,fanart,'')
@@ -1094,25 +1134,25 @@ def correctPVR():
     
 def ivueint():
     ivuesetup.iVueInt()
-    xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'iVue Integration Complete')
+    xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'iVue Integration Complete')
     xbmc.executebuiltin('ActivateWindow(10025,"plugin://plugin.video.IVUEcreator/update_addon/plugin.video.tvpro",return)')
     xbmc.executebuiltin("XBMC.ActivateWindow(Home)")
     
 def ivueint2():
     ivuesetup.iVueInt2()
-    xbmcgui.Dialog().ok('[COLOR darkgrey]tvpro[/COLOR]', 'iVue Integration Complete')
+    xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', 'iVue Integration Complete')
     home()
     
     
 def SIMPLEtvguidesetup():
-    dialog = xbmcgui.Dialog().yesno('[COLOR darkgrey]tvpro[/COLOR]','Would you like us to setup Simple PVR Guide for you?')
+    dialog = xbmcgui.Dialog().yesno('[COLOR white]tvpro[/COLOR]','Would you like us to setup Simple PVR Guide for you?')
     if dialog:
         pvrsetup()
     else:
         home()
         
 def IVUEtvguidesetup():
-    dialog = xbmcgui.Dialog().yesno('[COLOR darkgrey]tvpro[/COLOR]','Would You like us to Setup iVue TV Guide for You?')
+    dialog = xbmcgui.Dialog().yesno('[COLOR white]tvpro[/COLOR]','Would You like us to Setup iVue TV Guide for You?')
     if dialog:
         ivueint()
     else:
@@ -1147,14 +1187,14 @@ def adultpopup():
         return False
 
 def adult_settings():
-    dialog = xbmcgui.Dialog().yesno('[COLOR darkgrey]tvpro[/COLOR]','Would you like to HIDE [COLOR pink]Adult Menu[/COLOR]?', 'You can always change this in settings later on.')
+    dialog = xbmcgui.Dialog().yesno('[COLOR white]tvpro[/COLOR]','Would you like to HIDE [COLOR pink]Adult Menu[/COLOR]?', 'You can always change this in settings later on.')
     if dialog:
         control.setSetting('Adult.Set','true')
         pass
     else:
         control.setSetting('Adult.Set','false')
         pass
-    dialog = xbmcgui.Dialog().yesno('[COLOR darkgrey]tvpro[/COLOR]','Would you like to PASSWORD PROTECT [COLOR pink]Adult Channels[/COLOR]?', 'You can always change this in settings later on.')
+    dialog = xbmcgui.Dialog().yesno('[COLOR white]tvpro[/COLOR]','Would you like to PASSWORD PROTECT [COLOR pink]Adult Channels[/COLOR]?', 'You can always change this in settings later on.')
     if dialog:
         control.setSetting('Adult.PWSet','true')
         adulter = adultpopup()
