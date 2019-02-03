@@ -266,9 +266,7 @@ def home():
 	tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
 	tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
 	tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
-	
-[B]Version 1.0.1[/B]
-- Initial Release#tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
+    #tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
 	plugintools.set_view( plugintools.LIST )
 	setView()
 	
