@@ -203,7 +203,7 @@ def start():
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
         #xbmc.executebuiltin('Container.Refresh')
-        auth = '%s:%s/player_api.php?username=%s&password=%'%(host,port,user,passw)
+        auth = '%s:%s/enigma2.php?username=%s&password=%get_live_categories'%(host,port,user,passw)
         auth = tools.OPEN_URL(auth)
         if auth == "":
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
@@ -221,7 +221,7 @@ def start():
             xbmc.executebuiltin('Container.Refresh')
             home()
     else:
-        auth = '%s:%s/player_api.php?username=%s&password=%s'%(host,port,username,password)
+        auth = '%s:%s/enigma2.php?username=%s&password=%get_live_categories'%(host,port,username,password)
         auth = tools.OPEN_URL(auth)
         if not auth=="":
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
@@ -286,7 +286,7 @@ def NEW_MENU():
     tools.addDir('[COLOR white]International[/COLOR]',url,24,international,fanart,'')
     #tools.addDir('[COLOR white]All Sports[/COLOR]',All_Sports,25,icon,fanart,'')
     #if adultset == "false":
-        tools.addDir('[COLOR white]Adult[/COLOR]',Adult,25,adult,fanart,'')
+        #tools.addDir('[COLOR white]Adult[/COLOR]',Adult,25,adult,fanart,'')
     tools.addDir('[COLOR gray]Original Playlist[/COLOR]','live',1,icon,fanart,'')
     tools.addDir('[B][COLOR black]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
     tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
@@ -879,7 +879,7 @@ def EXIT():
                 
 def stream_video(url):
     if adultpwset == "true":
-        a = 'XO', 'XXX', 'Adult', 'Adults','ADULT','ADULTS','adult','adults','Porn','PORN','porn','Porn','xxx'
+        a = 'XO', 'XXX', 'Adult', 'Adults','ADULT','ADULTS','adult','adults','Porn','PORN','porn','Porn','xxx','xx'
         if any(s in name for s in a):
             text = control.inputDialog(heading='Enter Adult Password:')
             if text ==control.setting('Adult.PW'):
