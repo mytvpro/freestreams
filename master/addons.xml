@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.0.64">
+<addons><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.0.65">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
 	<import addon="script.module.requests" />
