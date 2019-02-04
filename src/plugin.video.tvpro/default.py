@@ -62,12 +62,9 @@ adultpw = control.setting('Adult.PW')
 host         = 'http://main.tvstreams.xyz'
 port         = '83'
 
-#live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_categories'%(host,port,username,password)
-#vod_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,username,password)
-#series_url   = '%s:%s/enigma2.php?username=%s&password=%s&type=get_series_categories'%(host,port,username,password)
-live_url     = '%s:%s/live/%s/%s/'%(host,port,username,password)
-vod_url      = '%s:%s/movie/%s/%s/'%(host,port,username,password)
-series_url   = '%s:%s/series/%s/%s/'%(host,port,username,password)
+live_url     = '%s:%s/player_api.php?username=%s&password=%s&type=get_live_categories'%(host,port,username,password)
+vod_url      = '%s:%s/player_api.php?username=%s&password=%s&type=get_movie_categories'%(host,port,username,password)
+series_url   = '%s:%s/player_api.php?username=%s&password=%s&type=get_series_categories'%(host,port,username,password)
 panel_api    = '%s:%s/panel_api.php?username=%s&password=%s'%(host,port,username,password)
 play_url     = '%s:%s/live/%s/%s/'%(host,port,username,password)
 
