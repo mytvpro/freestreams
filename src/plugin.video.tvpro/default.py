@@ -63,7 +63,7 @@ host         = 'http://main.tvstreams.xyz'
 port         = '83'
 
 live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_categories'%(host,port,username,password)
-vod_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_movie_categories'%(host,port,username,password)
+vod_url      = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,username,password)
 series_url   = '%s:%s/enigma2.php?username=%s&password=%s&type=get_series_categories'%(host,port,username,password)
 panel_api    = '%s:%s/panel_api.php?username=%s&password=%s'%(host,port,username,password)
 play_url     = '%s:%s/live/%s/%s/'%(host,port,username,password)
@@ -203,7 +203,7 @@ def start():
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
         #xbmc.executebuiltin('Container.Refresh')
-        auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,user,password)
+        auth = '%s:%s/enigma2.php?username=%s&password=%&get_series_categories'%(host,port,user,password)
         auth = tools.OPEN_URL(auth)
         if auth == "":
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
@@ -221,7 +221,7 @@ def start():
             xbmc.executebuiltin('Container.Refresh')
             home()
     else:
-        auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,username,password)
+        auth = '%s:%s/enigma2.php?username=%s&password=%s&get_vod_categories'%(host,port,username,password)
         auth = tools.OPEN_URL(auth)
         if not auth=="":
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
