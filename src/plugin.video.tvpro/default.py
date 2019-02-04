@@ -239,7 +239,7 @@ def start():
             #tools.addDir('[COLOR white]tes Search VOD[/COLOR]','url',43,icon,fanart,'')
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
             #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
-            tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
+            #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
             tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
             tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
             tools.addDir('[COLOR white]Account Information[/COLOR]','url',6,icon,fanart,'')
@@ -263,7 +263,7 @@ def home():
     #tools.addDir('[COLOR white]test Search VOD[/COLOR]','url',43,icon,fanart,'')
     #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
     #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
-    tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
+    #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
     tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
     tools.addDir('[COLOR white]Account Information[/COLOR]','url',6,icon,fanart,'')
@@ -421,6 +421,7 @@ def extras():
     #tools.addDir('[COLOR white]Setup iVue TV Guide -New-[/COLOR]','tv',36,guide,fanart,'')
     #tools.addDir('[COLOR white]iVue TV Guide Settings[/COLOR]','tv',38,guide,fanart,'')
     #tools.addDir('[COLOR white]Reboot iVue TV Guide[/COLOR]','url',20,guide,fanart,'')
+    tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     
 def settingsmenu():
     tools.addDir('Settings','tv',39,icon,fanart,'')
@@ -697,7 +698,7 @@ def vod(url):
 
 def series(url):
     if url =="series":
-        open = tools.OPEN_URL(vod_url)
+        open = tools.OPEN_URL(series_url)
     else:
         open = tools.OPEN_URL(url)
     all_cats = tools.regex_get_all(open,'<channel>','</channel>')

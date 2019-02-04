@@ -1,3 +1,6 @@
+[B]Version 1.0.6[/B]
+- test series menu
+
 [B]Version 1.0.4[/B]
 - test menu items
 
