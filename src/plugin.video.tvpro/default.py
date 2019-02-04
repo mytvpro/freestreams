@@ -232,7 +232,7 @@ def start():
             if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
                 tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
             tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
-            tools.addDir('[COLOR white]TV Series[/COLOR]','series',3,vodtv,fanart,'')
+            tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,vodtv,fanart,'')
             #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
             #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
             tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
@@ -256,7 +256,7 @@ def home():
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
     tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
-    tools.addDir('[COLOR white]TV Series[/COLOR]','series',3,vodtv,fanart,'')
+    tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,vodtv,fanart,'')
     #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
     #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
@@ -1422,7 +1422,7 @@ elif mode==36:
     ivueint2()
     
 elif mode==37:
-    testarea()
+    series_url()
 
 elif mode==38:
     ivue_settings()
