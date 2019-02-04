@@ -172,7 +172,7 @@ BT_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_i
 BBC_RED_BUTTON_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_id=1527'%(host,port,username,password)
 
 Guide    = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'guide.xml'))
-GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'guide.xml'))
+GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'guideloc'))
 
 advanced_settings           =  xbmc.translatePath('special://home/addons/'+addon_id+'/resources/advanced_settings')
 advanced_settings_target    =  xbmc.translatePath(os.path.join('special://home/userdata','advancedsettings.xml'))
@@ -203,7 +203,7 @@ def start():
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
         #xbmc.executebuiltin('Container.Refresh')
-        auth = '%s:%s/panel_api.php?username=%s&password=%'%(host,port,user,passw)
+        auth = '%s:%s/player_api.php?username=%s&password=%'%(host,port,user,passw)
         auth = tools.OPEN_URL(auth)
         if auth == "":
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
@@ -221,7 +221,7 @@ def start():
             xbmc.executebuiltin('Container.Refresh')
             home()
     else:
-        auth = '%s:%s/panel_api.php?username=%s&password=%s'%(host,port,username,password)
+        auth = '%s:%s/player_api.php?username=%s&password=%s'%(host,port,username,password)
         auth = tools.OPEN_URL(auth)
         if not auth=="":
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
@@ -249,6 +249,7 @@ def start():
             setView()
 def home():
     #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
+    tools.addDir('[COLOR white]Account Information[/COLOR]','url',6,icon,fanart,'')
     tools.addDir('[COLOR white]Live TV[/COLOR]','live',1,icon,fanart,'')
     #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
@@ -266,7 +267,6 @@ def home():
     #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
     tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
-    tools.addDir('[COLOR white]Account Information[/COLOR]','url',6,icon,fanart,'')
     #tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
     plugintools.set_view( plugintools.LIST )
     setView()
@@ -285,7 +285,7 @@ def NEW_MENU():
     tools.addDir('[COLOR white]Canada[/COLOR]',url,50,canada,fanart,'')
     tools.addDir('[COLOR white]International[/COLOR]',url,24,international,fanart,'')
     #tools.addDir('[COLOR white]All Sports[/COLOR]',All_Sports,25,icon,fanart,'')
-    if adultset == "false":
+    #if adultset == "false":
         tools.addDir('[COLOR white]Adult[/COLOR]',Adult,25,adult,fanart,'')
     tools.addDir('[COLOR gray]Original Playlist[/COLOR]','live',1,icon,fanart,'')
     tools.addDir('[B][COLOR black]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
@@ -738,7 +738,7 @@ def series(url):
         
 ##########################################
 def catchup():
-    loginurl   = "http://tvkings.tvstreams.xyz:83/get.php?username=" + username + "&password=" + password + "&type=m3u_plus&output=ts"
+    loginurl   = "http://main.tvstreams.xyz:83/player_api.php?username=" + username + "&password=" + password
     try:
         connection = urllib2.urlopen(loginurl)
         print connection.getcode()
@@ -1119,7 +1119,7 @@ def correctPVR():
     username_text = addon.getSetting(id='Username')
     password_text = addon.getSetting(id='Password')
     jsonSetPVR = '{"jsonrpc":"2.0", "method":"Settings.SetSettingValue", "params":{"setting":"pvrmanager.enabled", "value":true},"id":1}'
-    IPTVon        = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.iptvsimple","enabled":true},"id":1}'
+    IPTVon     = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.iptvsimple","enabled":true},"id":1}'
     nulldemo   = '{"jsonrpc":"2.0","method":"Addons.SetAddonEnabled","params":{"addonid":"pvr.demo","enabled":false},"id":1}'
     loginurl   = "http://main.tvstreams.xyz:83/get.php?username=" + username_text + "&password=" + password_text + "&type=m3u_plus&output=ts"
     EPGurl     = "http://main.tvstreams.xyz:83/xmltv.php?username=" + username_text + "&password=" + password_text
