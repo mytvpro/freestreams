@@ -426,7 +426,7 @@ def extras():
 def settingsmenu():
     tools.addDir('Settings','tv',39,icon,fanart,'')
     tools.addDir('Edit Advanced Settings','ADS',10,icon,fanart,'')
-    tools.addDir('Log Out','LO',10,icon,fanart,'')
+ 
     
 def ALL_247():    
     tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR crimson]24/7[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
@@ -1099,13 +1099,14 @@ def accountinfo():
         Expired = 'Never'
     else:
         Expired = datetime.datetime.fromtimestamp(int(Expiry)).strftime('%H:%M %m/%d/%Y')
-    tools.addDir('[COLOR white]=-=-=-=-=-=-=-=[COLOR white]tvpro[/COLOR] [COLOR white]Account Info[/COLOR][COLOR white]=-=-=-=-=-=-=-=[/COLOR]','','',icon,fanart,'')
+    #tools.addDir('[COLOR white]=-=-=-=-=-=-=-=[COLOR white]tvpro[/COLOR] [COLOR white]Account Info[/COLOR][COLOR white]=-=-=-=-=-=-=-=[/COLOR]','','',icon,fanart,'')
     tools.addDir('[COLOR white]Username :[/COLOR] '+Username,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Expire Date:[/COLOR] '+Expired,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Account Status :[/COLOR] '+Status,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Current Connections:[/COLOR] '+Current,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Allowed Connections:[/COLOR] '+Max,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Created:[/COLOR] '+Created,'','',icon,fanart,'')
+    tools.addDir('Log Out','LO',10,icon,fanart,'')
     tools.addDir('To reactivate account please visit tvstreams.xyz',All,2,icon,fanart,'')
     #tools.addDir('Please go to site you signed up on.',All,2,icon,fanart,'')
     #tools.addDir('tvstreams.xyz',All,2,icon,fanart,'')
