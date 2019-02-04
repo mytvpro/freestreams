@@ -232,7 +232,7 @@ def start():
             if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
                 tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
             tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
-            tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,vodtv,fanart,'')
+            tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
             #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
             #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
             tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
@@ -256,7 +256,7 @@ def home():
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
     tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
-    tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,vodtv,fanart,'')
+    tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
     #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
     #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
@@ -694,7 +694,7 @@ def vod(url):
                 thumb= tools.regex_from_to(a,'<desc_image>','</desc_image>').replace('<![CDATA[','').replace(']]>','')
                 url  = tools.regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
                 desc = tools.regex_from_to(a,'<description>','</description>')
-                tools.addDir(name,url,4,thumb,fanart,base64.b64decode(desc))
+                tools.addDir(name,url,3,thumb,fanart,base64.b64decode(desc))
 
 def series(url):
     if url =="series":
@@ -726,14 +726,14 @@ def series(url):
                     genre= tools.regex_from_to(desc,'GENRE:','\n')
                     tools.addDirMeta(str(name).replace('[/COLOR].','.[/COLOR]'),url,4,thumb,fanart,plot,str(year).replace("['","").replace("']",""),str(cast).split(),ratin,runt,genre)
                 except:pass
-                xbmcplugin.setContent(int(sys.argv[1]), 'series')
+                xbmcplugin.setContent(int(sys.argv[2]), 'series')
             else:
                 name = tools.regex_from_to(a,'<title>','</title>')
                 name = base64.b64decode(name)
                 thumb= tools.regex_from_to(a,'<desc_image>','</desc_image>').replace('<![CDATA[','').replace(']]>','')
                 url  = tools.regex_from_to(a,'<stream_url>','</stream_url>').replace('<![CDATA[','').replace(']]>','')
                 desc = tools.regex_from_to(a,'<description>','</description>')
-                tools.addDir(name,url,4,thumb,fanart,base64.b64decode(desc))
+                tools.addDir(name,url,37,thumb,fanart,base64.b64decode(desc))
         
         
 ##########################################
