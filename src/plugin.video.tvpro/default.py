@@ -706,7 +706,7 @@ def series(url):
         if '<playlist_url>' in open:
             name = tools.regex_from_to(a,'<title>','</title>')
             url1  = tools.regex_from_to(a,'<playlist_url>','</playlist_url>').replace('<![CDATA[','').replace(']]>','')
-            tools.addDir(str(base64.b64decode(name)).replace('?',''),url1,3,icon,fanart,'')
+            tools.addDir(str(base64.b64decode(name)).replace('?',''),url1,37,icon,fanart,'')
             plugintools.set_view( plugintools.LIST )
         else:
             if xbmcaddon.Addon().getSetting('meta') == 'true':
@@ -753,7 +753,7 @@ def catchup():
         xbmc.executebuiltin("Dialog.Close(busydialog)")
 
     url = "%s:%s/xmltv.php?username=%s&password=%s"%(host,port,username,password)
-    DownloaderClass(url,GuideLoc + "uide.xml")
+    DownloaderClass(url,GuideLoc + "guide.xml")
     
     f = open(Guide, 'r+')
     input = open(Guide).read().decode('UTF-8')
@@ -1106,9 +1106,9 @@ def accountinfo():
     tools.addDir('[COLOR white]Current Connections:[/COLOR] '+Current,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Allowed Connections:[/COLOR] '+Max,'','',icon,fanart,'')
     tools.addDir('[COLOR white]Created:[/COLOR] '+Created,'','',icon,fanart,'')
-    tools.addDir('To reactivate account',All,2,icon,fanart,'')
-    tools.addDir('Please go to site you signed up on.',All,2,icon,fanart,'')
-    tools.addDir('tvstreams.xyz',All,2,icon,fanart,'')
+    tools.addDir('To reactivate account please visit tvstreams.xyz',All,2,icon,fanart,'')
+    #tools.addDir('Please go to site you signed up on.',All,2,icon,fanart,'')
+    #tools.addDir('tvstreams.xyz',All,2,icon,fanart,'')
     plugintools.set_view( plugintools.LIST )
 
     
