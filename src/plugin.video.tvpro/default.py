@@ -208,7 +208,7 @@ def start():
         if auth == "":
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
             line2 = "Please Re-enter" 
-            line3 = "To unlock your TV PRO go to:[COLOR white] tvstreams.xyz[/COLOR]" 
+            line3 = "To unlock your TV PRO visit[COLOR white] tvstreams.xyz[/COLOR]" 
             xbmcgui.Dialog().ok('[COLOR white]tvpro[/COLOR]', line1, line2, line3)
             start()
         else:
@@ -738,8 +738,12 @@ def series(url):
         
 ##########################################
 def catchup():
-    loginurl   = "http://main.tvstreams.xyz:83/player_api.php?username=" + username + "&password=" + password + "&type=m3u_plus&output=ts"
-    try: login correct, proceed to addon
+    loginurl   = "http://main.tvstreams.xyz:83/player_api.php?username=" + username + "&password=" + password
+    try:
+        connection = urllib2.urlopen(loginurl)
+        print connection.getcode()
+        connection.close()
+        #playlist found, user active & login correct, proceed to addon
         pass
         
     except urllib2.HTTPError, e:
