@@ -172,7 +172,7 @@ BT_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_i
 BBC_RED_BUTTON_SPORTS='%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_id=1527'%(host,port,username,password)
 
 Guide    = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'guide.xml'))
-GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'g'))
+GuideLoc = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.tvpro/resources/catchup', 'guide.xml'))
 
 advanced_settings           =  xbmc.translatePath('special://home/addons/'+addon_id+'/resources/advanced_settings')
 advanced_settings_target    =  xbmc.translatePath(os.path.join('special://home/userdata','advancedsettings.xml'))
@@ -203,7 +203,7 @@ def start():
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
         #xbmc.executebuiltin('Container.Refresh')
-        auth = '%s:%s/enigma2.php?username=%s&password=%&get_series_categories'%(host,port,user,password)
+        auth = '%s:%s/panel_api.php?username=%s&password=%'%(host,port,user,passw)
         auth = tools.OPEN_URL(auth)
         if auth == "":
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
@@ -221,7 +221,7 @@ def start():
             xbmc.executebuiltin('Container.Refresh')
             home()
     else:
-        auth = '%s:%s/enigma2.php?username=%s&password=%s&get_vod_categories'%(host,port,username,password)
+        auth = '%s:%s/panel_api.php?username=%s&password=%s'%(host,port,username,password)
         auth = tools.OPEN_URL(auth)
         if not auth=="":
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
