@@ -1422,7 +1422,7 @@ elif mode==36:
     ivueint2()
     
 elif mode==37:
-    series_url()
+    series(url)
 
 elif mode==38:
     ivue_settings()
