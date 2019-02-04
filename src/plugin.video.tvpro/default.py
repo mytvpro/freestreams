@@ -447,7 +447,7 @@ def ALL_247():
     
 def US_ALL():
     US = [" US ", " us "]
-    live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_id=0'%(host,port,username,password)
+    live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams'%(host,port,username,password)
     list = tools.OPEN_URL(live_url)
     all_cats = tools.regex_get_all(list,'<channel>','</channel>')
     for a in all_cats:
@@ -471,7 +471,7 @@ def US_ALL():
     
 def US_NEWS():
     US_NEWS = ["News", "NEWS", "FOX 25", "CNN", "Bloomberg", "CNBC", "MSN", "MSNBC"]
-    live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams&cat_id=0'%(host,port,username,password)
+    live_url     = '%s:%s/enigma2.php?username=%s&password=%s&type=get_live_streams'%(host,port,username,password)
     list = tools.OPEN_URL(live_url)
     all_cats = tools.regex_get_all(list,'<channel>','</channel>')
     for a in all_cats:
@@ -726,7 +726,7 @@ def series(url):
                     genre= tools.regex_from_to(desc,'GENRE:','\n')
                     tools.addDirMeta(str(name).replace('[/COLOR].','.[/COLOR]'),url,4,thumb,fanart,plot,str(year).replace("['","").replace("']",""),str(cast).split(),ratin,runt,genre)
                 except:pass
-                xbmcplugin.setContent(int(sys.argv[1]), 'movies')
+                xbmcplugin.setContent(int(sys.argv[1]), 'series')
             else:
                 name = tools.regex_from_to(a,'<title>','</title>')
                 name = base64.b64decode(name)
