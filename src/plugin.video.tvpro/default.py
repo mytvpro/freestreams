@@ -738,7 +738,7 @@ def series(url):
         
 ##########################################
 def catchup():
-    loginurl   = "http://main.tvstreams.xyz:83/player_api.php?username=" + username + "&password=" + password
+    loginurl   = "http://main.tvstreams.xyz:83/player_api.php?username=" + username + "&password=" + password + "&type=m3u_plus&output=ts"
     try: login correct, proceed to addon
         pass
         
