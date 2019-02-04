@@ -202,7 +202,7 @@ def start():
         passw= passpopup()
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
-        xbmc.executebuiltin('Container.Refresh')
+        #xbmc.executebuiltin('Container.Refresh')
         auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,user,passw)
         auth = tools.OPEN_URL(auth)
         if auth == "":
@@ -229,8 +229,8 @@ def start():
             #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
             if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
                 tools.addDir('[COLOR white]TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-            if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-                tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+            #if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+                #tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
             tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
             tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
             #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
