@@ -203,7 +203,7 @@ def start():
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
         #xbmc.executebuiltin('Container.Refresh')
-        auth = '%s:%s/enigma2.php?username=%s&password=%&action=get_live_categories'%(host,port,user,passw)
+        auth = '%s:%s/enigma2.php?username=%s&password=%&type=get_live_categories'%(host,port,user,passw)
         auth = tools.OPEN_URL(auth)
         if auth == "":
             line1 = "[COLOR red]Incorrect Login Details![/COLOR]"
@@ -221,7 +221,7 @@ def start():
             xbmc.executebuiltin('Container.Refresh')
             home()
     else:
-        auth = '%s:%s/enigma2.php?username=%s&password=%&action=get_live_categories'%(host,port,username,password)
+        auth = '%s:%s/enigma2.php?username=%s&password=%&type=get_live_categories'%(host,port,username,password)
         auth = tools.OPEN_URL(auth)
         if not auth=="":
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]tvpro[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
