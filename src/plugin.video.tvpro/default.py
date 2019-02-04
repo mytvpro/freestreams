@@ -254,8 +254,8 @@ def home():
     #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         tools.addDir('[COLOR white]TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-    if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-        tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+    #if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+        #tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
     tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
     tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
     #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
