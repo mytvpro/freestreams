@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.tvpro"
        name="tvpro"
-       version="1.3.3"
+       version="1.3.4"
        provider-name="tvpro">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
@@ -24,7 +24,7 @@
 		<website>tvstreams.xyz</website>
 		<email>hosting@tvstreams.xyz</email>
 		<assets>
-			<icon>icon.png</icon>
+			<icon>icon2.png</icon>
 			<fanart>fanart.jpg</fanart>
 			<screenshot>resources/screenshot01.png</screenshot>
 			<screenshot>resources/screenshot02.png</screenshot>
