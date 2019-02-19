@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.tvpro2" name="TV Pro" provider-name="TV Pro Team" version="1.0.3">
+<addons><addon id="plugin.video.tvpro2" name="TV Pro" provider-name="TV Pro Team" version="1.0.4">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.universalscrapers" version="1.0.0" />
@@ -26,7 +26,7 @@
         <video_guide />
         <reuselanguageinvoker>false</reuselanguageinvoker>
     </extension>
-</addon><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.3.8">
+</addon><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.3.9">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
 	<import addon="script.module.requests" />
@@ -56,10 +56,10 @@
 		<news>Welcome to our initial release!</news>
     <disclaimer lang="en">[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
   </extension>
-</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.5">
+</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.6">
     <extension point="xbmc.addon.repository">
         
-        <dir minversion="17.0.0">
+        <dir minversion="17.6.0">
             <info compressed="false">https://mytvpro.github.io/tvpro/master/addons.xml</info>
             <checksum>https://mytvpro.github.io/tvpro/master/addons.xml.md5</checksum>
             <datadir zip="true">https://mytvpro.github.io/tvpro/master/datadir/</datadir>
