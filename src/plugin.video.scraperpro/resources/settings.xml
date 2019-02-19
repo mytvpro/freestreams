@@ -63,7 +63,7 @@
     <category label="Resolvers">
         <setting label="30741" type="lsep"/>
         <setting label="30742" type="action" option="close"
-               action="RunPlugin(plugin://plugin.video.tvpro/?mode=ResolverSettings)"/>
+               action="RunPlugin(plugin://plugin.video.scraperpro/?mode=ResolverSettings)"/>
 
         <!-- filtering settings -->
         <setting label="30735" type="lsep"/>
@@ -83,7 +83,7 @@
     <category label="Enter Own API's">
         <setting id="debug" type="bool" label="API's" default="false" visible="true"/>
         <setting id="first_run" label="first run" type="bool" default="false" visible="false"/>
-        <setting label="Cache Location" id="cache_folder" type="folder" default="special://profile/addon_data/plugin.video.tvpro/" visible="false"/>
+        <setting label="Cache Location" id="cache_folder" type="folder" default="special://profile/addon_data/plugin.video.scraperpro/" visible="false"/>
         <setting label="TVDB API Key" type="text" id="tvdb_api_key" option="hidden" default="1BA280CCD861ED8D" visible="eq(-3,true)"/>
         <setting label="TMDB API Key" type="text" id="tmdb_api_key" option="hidden" default="5fe9f12dcf4eee2dd43e029b2f81d7ac" visible="eq(-4,true)"/>
         <setting label="Trakt Client ID" type="text" id="trakt_api_client_id" option="hidden" default="ac6f3f70ad6abf20f063854a2e2941482cc98d1409bd9fea2e33d1bca7fc2d8a" visible="eq(-5,true)"/>
