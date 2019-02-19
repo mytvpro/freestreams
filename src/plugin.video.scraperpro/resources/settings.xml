@@ -54,7 +54,7 @@
     <category label="Scrapers">
         <setting label="30733" type="lsep"/>
         <setting label="30734" type="action" option="close"
-               action="RunPlugin(plugin://plugin.video.tvpro/?mode=ScraperSettings)"/>
+               action="RunPlugin(plugin://plugin.video.scraperpro/?mode=ScraperSettings)"/>
         <setting id="use_link_dialog" label="30744" type="bool" default="true" />
         <setting id="link_fallthrough" label="30745" type="bool"	default="true" visible="eq(-1,true)"/>
     </category>
