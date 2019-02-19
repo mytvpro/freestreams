@@ -28,7 +28,7 @@
 		</assets>
 		<news>Welcome to our initial release!</news>
   </extension>
-</addon><addon id="plugin.video.tvpro" name="TV Pro" provider-name="TV Pro Team" version="1.0.0">
+</addon><addon id="plugin.video.tvpro2" name="TV Pro" provider-name="TV Pro Team" version="1.0.1">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.universalscrapers" version="1.0.0" />
