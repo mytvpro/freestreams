@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.tvpro2" name="TV Pro" provider-name="TV Pro Team" version="1.0.1">
+<addons><addon id="plugin.video.tvpro2" name="TV Pro" provider-name="TV Pro Team" version="1.0.2">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.universalscrapers" version="1.0.0" />
@@ -26,7 +26,7 @@
         <video_guide />
         <reuselanguageinvoker>false</reuselanguageinvoker>
     </extension>
-</addon><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.3.6">
+</addon><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.3.7">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
 	<import addon="script.module.requests" />
@@ -36,12 +36,12 @@
   </extension>
 
   <extension point="xbmc.addon.metadata">
-		<platform>all</platform>
+    <platform>all</platform>
     <summary lang="en">[COLOR darkblue]tvpro[/COLOR]</summary>
     <language>en</language>
     <description lang="en">[COLOR darkblue]tvpro[/COLOR] Official Addon - High Quality and Stable Streams - for more info go to [COLOR yellowgreen]tvstreams.xyz[/COLOR]</description>
     <license />
-		<language />
+    <language />
 		<forum>https://t.me/joinchat/F1aXAU9UxtzZ3cl4885Pjw</forum>
 		<source>https://mytvpro.github.io/tvpro</source>
 		<website>tvstreams.xyz</website>
@@ -54,8 +54,9 @@
 			<screenshot>resources/screenshot03.png</screenshot>
 		</assets>
 		<news>Welcome to our initial release!</news>
+    <disclaimer lang="en">[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
   </extension>
-</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.2">
+</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.3">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
