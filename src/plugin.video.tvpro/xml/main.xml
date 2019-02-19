@@ -1,0 +1,50 @@
+
+
+<dir>
+   <name>Movies</name>
+   <link>file://movies.xml</link>
+   <thumbnail></thumbnail>
+   <fanart></fanart>
+</dir>
+
+<dir>
+   <name>TV Shows</name>
+   <link>file://movies.xml</link>
+   <thumbnail></thumbnail>
+   <fanart></fanart>
+</dir>
+
+<dir>
+<title>Search TMDB</title>
+<tmdb>search</tmdb>
+</dir>
+	
+<dir>
+<title>Search Trakt</title>
+<trakt>search</trakt>
+</dir>
+
+<plugin>
+<name>Real Debrid Login</name>
+<link>plugin://script.module.resolveurl/?mode=auth_rd</link>
+<thumbnail></thumbnail>
+<fanart></fanart>
+</plugin>
+
+<item>
+<title>Pair With Sites</title>
+<pairwith>pairlist</pairwith>
+</item>
+
+<plugin>
+<name>Settings</name>
+<link>plugin://plugin.video.tvpro/?action=openSettings</link>
+<thumbnail></thumbnail>
+</plugin>
+
+<plugin>
+<name>Clear Cache</name>
+<link>plugin://plugin.video.tvpro/?mode=clearCache</link>
+<thumbnail></thumbnail>
+</plugin>
+

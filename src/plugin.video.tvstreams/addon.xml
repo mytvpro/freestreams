@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.tvpro"
+       name="tvpro"
+       version="1.3.6"
+       provider-name="tvpro">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+    <summary lang="en">[COLOR darkblue]tvpro[/COLOR]</summary>
+    <language>en</language>
+    <description lang="en">[COLOR darkblue]tvpro[/COLOR] Official Addon - High Quality and Stable Streams - for more info go to [COLOR yellowgreen]tvstreams.xyz[/COLOR]</description>
+    <license></license>
+		<language></language>
+		<forum>https://t.me/joinchat/F1aXAU9UxtzZ3cl4885Pjw</forum>
+		<source>https://mytvpro.github.io/tvpro</source>
+		<website>tvstreams.xyz</website>
+		<email>hosting@tvstreams.xyz</email>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>resources/screenshot01.png</screenshot>
+			<screenshot>resources/screenshot02.png</screenshot>
+			<screenshot>resources/screenshot03.png</screenshot>
+		</assets>
+		<news>Welcome to our initial release!</news>
+  </extension>
+</addon>

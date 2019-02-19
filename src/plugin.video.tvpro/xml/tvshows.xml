@@ -1,0 +1,48 @@
+<dir>
+<title>Trending Shows</title>
+<trakt>https://api.trakt.tv/shows/trending</trakt>
+</dir>
+
+<dir>
+<title>Anticipated Shows</title>
+<trakt>https://api.trakt.tv/shows/anticipated</trakt>
+</dir>
+
+<dir>
+  <title>Popular</title>
+  <tmdb>tv/popular</tmdb>
+</dir>
+
+<dir>
+<name>Genre</name>
+<link>http://wizard.mancavekodi.com/xml/genre_tv.xml</link>
+<thumbnail></thumnail>
+<summary></summary>
+</dir>
+
+<dir>
+<name>Networks</name>
+<link>http://wizard.mancavekodi.com/xml/networks.xml</link>
+<thumbnail></thumnail>
+<summary></summary>
+</dir>
+
+<dir>
+  <title>Top Rated</title>
+  <tmdb>tv/top_rated</tmdb>
+</dir>
+
+<dir>
+  <title>Airing Today</title>
+  <tmdb>tv/today</tmdb>
+</dir>
+
+<dir>
+<title>Search TMDB</title>
+<tmdb>search</tmdb>
+</dir>
+	
+<dir>
+<title>Search Trakt</title>
+<trakt>search</trakt>
+</dir>

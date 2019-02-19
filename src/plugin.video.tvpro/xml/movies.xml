@@ -1,0 +1,52 @@
+<dir>
+<name>Boxsets</name>
+<link>http://wizard.mancavekodi.com/xml/boxsets.xml</link>
+<thumbnail></thumnail>
+<summary>Boxsets</summary>
+</dir>
+
+<dir>
+<name>Kids Boxsets</name>
+<link>http://wizard.mancavekodi.com/xml/kids_boxset.xml</link>
+<thumbnail></thumnail>
+<summary>Kids Boxset Movies</summary>
+</dir>
+
+<dir>
+<title>Popular</title>
+<tmdb>movies/popular</tmdb>
+</dir>
+
+<dir>
+<name>Genres</name>
+<link>http://wizard.mancavekodi.com/xml/genre-movies.xml</link>
+<thumbnail></thumnail>
+<summary>Man Cave Movies Genres</summary>
+</dir>
+
+<dir>
+<name>Years</name>
+<link>http://wizard.mancavekodi.com/xml/yearsmovies.xml</link>
+<thumbnail></thumnail>
+<summary>Man Cave Movies Years</summary>
+</dir>
+
+<dir>
+<title>In Theaters</title>
+<tmdb>movies/now_playing</tmdb>
+</dir>
+
+<dir>
+<title>Top Rated</title>
+<tmdb>movies/top_rated</tmdb>
+</dir>
+
+<dir>
+<title>Search TMDB</title>
+<tmdb>search</tmdb>
+</dir>
+	
+<dir>
+<title>Search Trakt</title>
+<trakt>search</trakt>
+</dir>
