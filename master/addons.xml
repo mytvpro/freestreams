@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.video.scraperpro" name="TVPRO Free Search" provider-name="TV Pro Team" version="1.0.5">
+<addons><addon id="plugin.video.scraperpro" name="TVPRO Free Search" provider-name="TVPRO TEAM" version="1.0.6">
     <requires>
         <import addon="xbmc.python" version="2.19.0" />
         <import addon="script.module.universalscrapers" version="1.0.0" />
@@ -26,7 +26,7 @@
         <video_guide />
         <reuselanguageinvoker>false</reuselanguageinvoker>
     </extension>
-</addon><addon id="plugin.video.tvpro" name="tvpro" provider-name="tvpro" version="1.4.0">
+</addon><addon id="plugin.video.tvpro" name="TVPRO IPTV" provider-name="TVPRO TEAM" version="1.4.1">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />
 	<import addon="script.module.requests" />
