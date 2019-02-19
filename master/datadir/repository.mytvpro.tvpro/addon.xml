@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" version="1.0.4" provider-name="mytvpro">
+<addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" version="1.0.5" provider-name="mytvpro">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
