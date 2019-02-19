@@ -56,7 +56,7 @@
 		<news>Welcome to our initial release!</news>
     <disclaimer lang="en">[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
   </extension>
-</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.6">
+</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.7">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.6.0">
@@ -88,7 +88,7 @@
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/mytvpro/tvpro</summary>
+        <summary lang="en_GB">TVPRO Kodi Addon Repository</summary>
         <description lang="en_GB" />
         <language />
         <platform>all</platform>
@@ -99,7 +99,7 @@
         <disclaimer />
         <assets>
             <icon>resources/icon.png</icon>
-            <fanart />
+            <fanart>resources/fanart.jpg</fanart>
         </assets>
     </extension>       
     
