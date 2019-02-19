@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" version="1.0.3" provider-name="mytvpro">
+<addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" version="1.0.4" provider-name="mytvpro">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
@@ -8,23 +8,6 @@
             <datadir zip="true">https://mytvpro.github.io/tvpro/master/datadir/</datadir>
         </dir>
 
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/mytvpro/tvpro</summary>
-        <description lang="en_GB"></description>
-        <language></language>
-        <platform>all</platform>
-        <license>GPL-3.0</license>
-        <forum></forum>
-        <source></source>
-        <news></news>
-        <disclaimer></disclaimer>
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart></fanart>
-        </assets>
-    </extension>
-    <extension>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
@@ -47,4 +30,20 @@
             <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
         </dir>
     </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/mytvpro/tvpro</summary>
+        <description lang="en_GB"></description>
+        <language></language>
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum></forum>
+        <source></source>
+        <news></news>
+        <disclaimer></disclaimer>
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart></fanart>
+        </assets>
+    </extension>       
+    
 </addon>

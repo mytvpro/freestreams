@@ -56,7 +56,7 @@
 		<news>Welcome to our initial release!</news>
     <disclaimer lang="en">[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
   </extension>
-</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.3">
+</addon><addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" provider-name="mytvpro" version="1.0.4">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.0.0">
@@ -65,23 +65,6 @@
             <datadir zip="true">https://mytvpro.github.io/tvpro/master/datadir/</datadir>
         </dir>
 
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/mytvpro/tvpro</summary>
-        <description lang="en_GB" />
-        <language />
-        <platform>all</platform>
-        <license>GPL-3.0</license>
-        <forum />
-        <source />
-        <news />
-        <disclaimer />
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart />
-        </assets>
-    </extension>
-    <extension>
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/jenaddon/repository.jenrepo/master/zips/addons.xml.md5</checksum>
@@ -104,4 +87,20 @@
             <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
         </dir>
     </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">A personal Kodi addon repository from https://github.com/mytvpro/tvpro</summary>
+        <description lang="en_GB" />
+        <language />
+        <platform>all</platform>
+        <license>GPL-3.0</license>
+        <forum />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart />
+        </assets>
+    </extension>       
+    
 </addon></addons>
