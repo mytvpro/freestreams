@@ -93,7 +93,7 @@ def main():
             repo_addon_id=repo_addon_name,
             repo_addon_name='{}/{} Repository'.format(args.repo_user, args.repo_name),
             repo_addon_provider=args.repo_user,
-            repo_addon_version='1.0.8',
+            repo_addon_version='1.0.9',
             repo_dir=dir_info,
             repo_addon_summary='TVPRO Kodi Addon Repository'.format(
                 args.repo_user, args.repo_name),

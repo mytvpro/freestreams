@@ -411,21 +411,21 @@ def INT():
 def extras():
     tools.addDir('[COLOR white]Create a Short M3U & EPG URL[/COLOR]','url',17,icon,fanart,'')
     tools.addDir('[COLOR white]Run a Speed Test[/COLOR]','ST',10,speed,fanart,'')
-    #if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+    if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         #tools.addDir('[COLOR white]Simple PVR Client TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-    #if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+    if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         #tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
     tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
-    #tools.addDir('[COLOR white]iVue TV Guide[/COLOR]','pvr',44,guide,fanart,'')
-    #tools.addDir('[COLOR white]Setup iVue TV Guide -Old-[/COLOR]','tv',15,guide,fanart,'')
-    #tools.addDir('[COLOR white]Setup iVue TV Guide -New-[/COLOR]','tv',36,guide,fanart,'')
-    #tools.addDir('[COLOR white]iVue TV Guide Settings[/COLOR]','tv',38,guide,fanart,'')
-    #tools.addDir('[COLOR white]Reboot iVue TV Guide[/COLOR]','url',20,guide,fanart,'')
+    tools.addDir('[COLOR white]iVue TV Guide[/COLOR]','pvr',44,guide,fanart,'')
+    tools.addDir('[COLOR white]Setup iVue TV Guide -Old-[/COLOR]','tv',15,guide,fanart,'')
+    tools.addDir('[COLOR white]Setup iVue TV Guide -New-[/COLOR]','tv',36,guide,fanart,'')
+    tools.addDir('[COLOR white]Reboot iVue TV Guide[/COLOR]','url',20,guide,fanart,'')
     tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     
 def settingsmenu():
     tools.addDir('Settings','tv',39,icon,fanart,'')
     tools.addDir('Edit Advanced Settings','ADS',10,icon,fanart,'')
+    tools.addDir('[COLOR white]iVue TV Guide Settings[/COLOR]','tv',38,guide,fanart,'')
  
     
 def ALL_247():    
