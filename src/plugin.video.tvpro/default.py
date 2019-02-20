@@ -202,7 +202,7 @@ def start():
         passw= passpopup()
         control.setSetting('Username',user)
         control.setSetting('Password',passw)
-        #xbmc.executebuiltin('Container.Refresh')
+        xbmc.executebuiltin('Container.Refresh')
         auth = '%s:%s/enigma2.php?username=%s&password=%s&type=get_vod_categories'%(host,port,user,passw)
         auth = tools.OPEN_URL(auth)
         if auth == "":
@@ -229,8 +229,8 @@ def start():
             #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
             if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
                 tools.addDir('[COLOR white]TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-            #if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-                #tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+            if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+                tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
             tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
             tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
             #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
@@ -238,7 +238,7 @@ def start():
             tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
             #tools.addDir('[COLOR white]tes Search VOD[/COLOR]','url',43,icon,fanart,'')
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
-            #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
+            tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
             #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
             tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
             tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
@@ -254,8 +254,8 @@ def home():
     #tools.addDir('[COLOR white]Live TV[/COLOR]','live',21,airing,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         tools.addDir('[COLOR white]TV Guide[/COLOR]','pvr',7,guide,fanart,'')
-    #if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-        #tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+    if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
+        tools.addDir('[COLOR white]Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
     tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
     tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
     #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
@@ -263,7 +263,7 @@ def home():
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
     #tools.addDir('[COLOR white]test Search VOD[/COLOR]','url',43,icon,fanart,'')
     #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
-    #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
+    tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
     #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
     tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
@@ -412,9 +412,9 @@ def extras():
     tools.addDir('[COLOR white]Create a Short M3U & EPG URL[/COLOR]','url',17,icon,fanart,'')
     tools.addDir('[COLOR white]Run a Speed Test[/COLOR]','ST',10,speed,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-        #tools.addDir('[COLOR white]Simple PVR Client TV Guide[/COLOR]','pvr',7,guide,fanart,'')
+        tools.addDir('[COLOR white]Simple PVR Client TV Guide[/COLOR]','pvr',7,guide,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
-        #tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
+        tools.addDir('[COLOR white]Simple PVR Client Channels Guide[/COLOR]','pvr',45,icon,fanart,'')
     tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
     tools.addDir('[COLOR white]iVue TV Guide[/COLOR]','pvr',44,guide,fanart,'')
     tools.addDir('[COLOR white]Setup iVue TV Guide -Old-[/COLOR]','tv',15,guide,fanart,'')
