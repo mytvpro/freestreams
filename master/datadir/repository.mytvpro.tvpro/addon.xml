@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" version="1.0.8" provider-name="mytvpro">
+<addon id="repository.mytvpro.tvpro" name="mytvpro/tvpro Repository" version="1.0.9" provider-name="mytvpro">
     <extension point="xbmc.addon.repository">
         
         <dir minversion="17.6.0">
@@ -29,20 +29,25 @@
             <checksum>https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/addons.xml.md5</checksum>
             <datadir zip="true">https://raw.githubusercontent.com/totalrevolution/python-koding/master/zips/</datadir>
         </dir>
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/totaltec2014/ivue2/master/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/totaltec2014/ivue2/master/</datadir>
+        </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en_GB">TVPRO Kodi Addon Repository</summary>
-        <description lang="en_GB"></description>
+        <description lang="en_GB">TVPRO TEAM REPO</description>
         <language></language>
         <platform>all</platform>
         <license>GPL-3.0</license>
         <forum></forum>
         <source></source>
         <news></news>
-        <disclaimer></disclaimer>
+        <disclaimer lang="en">[CR]The author is in no way affiliated with Kodi, Team Kodi, or the XBMC Foundation.</disclaimer>
         <assets>
             <icon>resources/icon.png</icon>
-             <fanart>/home/travis/.sources/master/src/repository.mytvpro.tvpro/resources/fanart.jpg</fanart>
+            <fanart>/home/travis/.sources/master/src/repository.mytvpro.tvpro/resources/fanart.jpg</fanart>
         </assets>
     </extension>       
     
