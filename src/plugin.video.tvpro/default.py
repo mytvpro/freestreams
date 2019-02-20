@@ -238,7 +238,7 @@ def start():
             #tools.addDir('[COLOR white]Search VOD[/COLOR]','url',43,icon,fanart,'')
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
             #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
-            tools.addDir('[COLOR white]TV Guides[/COLOR]','url',27,extra,fanart,'')
+            tools.addDir('[COLOR white]TV Guides[/COLOR]','url',27,guide,fanart,'')
             tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
             tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
             tools.addDir('[COLOR white]Account Information[/COLOR]','url',6,icon,fanart,'')
@@ -262,7 +262,7 @@ def home():
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
     #tools.addDir('[COLOR white]Search VOD[/COLOR]','url',43,icon,fanart,'')
     #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
-    tools.addDir('[COLOR white]TV Guides[/COLOR]','url',27,extra,fanart,'')
+    tools.addDir('[COLOR white]TV Guides[/COLOR]','url',27,guide,fanart,'')
     tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
     tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
     #tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
@@ -416,7 +416,6 @@ def guides():
     tools.addDir('[COLOR white]Setup iVue TV Guide -Old-[/COLOR]','tv',15,guide,fanart,'')
     tools.addDir('[COLOR white]Setup iVue TV Guide -New-[/COLOR]','tv',36,guide,fanart,'')
     tools.addDir('[COLOR white]Reboot iVue TV Guide[/COLOR]','url',20,guide,fanart,'')
-    tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
 
 
 def extras():
@@ -1395,7 +1394,7 @@ elif mode==26:
     NFL()
     
 elif mode==27:
-    Guides()
+    guides()
     
 elif mode==28:
     LIVE_FOOTBALL()    
