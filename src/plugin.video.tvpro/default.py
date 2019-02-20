@@ -234,12 +234,11 @@ def start():
             tools.addDir('[COLOR white]Video on Demand[/COLOR]','vod',3,vodtv,fanart,'')
             tools.addDir('[COLOR white]TV Series[/COLOR]','series',37,networks,fanart,'')
             #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
-            #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
             tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
-            #tools.addDir('[COLOR white]tes Search VOD[/COLOR]','url',43,icon,fanart,'')
+            #tools.addDir('[COLOR white]Search VOD[/COLOR]','url',43,icon,fanart,'')
             #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
-            tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
-            #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
+            #tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
+            tools.addDir('[COLOR white]TV Guides[/COLOR]','url',16,extra,fanart,'')
             tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
             tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
             tools.addDir('[COLOR white]Account Information[/COLOR]','url',6,icon,fanart,'')
@@ -261,10 +260,9 @@ def home():
     #tools.addDir('[COLOR white]24/7[/COLOR]','url',49,catch,fanart,'')
     #tools.addDir('[COLOR white]Music[/COLOR]',Music_Choice,25,music,fanart,'')
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
-    #tools.addDir('[COLOR white]test Search VOD[/COLOR]','url',43,icon,fanart,'')
+    #tools.addDir('[COLOR white]Search VOD[/COLOR]','url',43,icon,fanart,'')
     #tools.addDir('[B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B] [B][COLOR white]TOOLS[/COLOR][/B] [B][COLOR white]=-=-=-=-=-=-=-=-=-=[/COLOR][/B]','','',icon,fanart,'')
-    tools.addDir('[COLOR white]Setup Simple PVR[/COLOR]','tv',11,guide,fanart,'')
-    #tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
+    tools.addDir('[COLOR white]TV Guides[/COLOR]','url',16,extra,fanart,'')
     tools.addDir('[COLOR white]Extras[/COLOR]','url',16,extra,fanart,'')
     tools.addDir('[COLOR white]Settings[/COLOR]','url',8,system,fanart,'')
     #tools.addDir('[COLOR gray]Test[/COLOR]','live',37,icon,fanart,'')
@@ -408,9 +406,7 @@ def INT():
     tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     tools.addDir('[COLOR white]Search[/COLOR]','url',5,search2,fanart,'')
     
-def extras():
-    tools.addDir('[COLOR white]Create a Short M3U & EPG URL[/COLOR]','url',17,icon,fanart,'')
-    tools.addDir('[COLOR white]Run a Speed Test[/COLOR]','ST',10,speed,fanart,'')
+def guides():
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
         tools.addDir('[COLOR white]Simple PVR Client TV Guide[/COLOR]','pvr',7,guide,fanart,'')
     if xbmc.getCondVisibility('System.HasAddon(pvr.iptvsimple)'):
@@ -420,6 +416,12 @@ def extras():
     tools.addDir('[COLOR white]Setup iVue TV Guide -Old-[/COLOR]','tv',15,guide,fanart,'')
     tools.addDir('[COLOR white]Setup iVue TV Guide -New-[/COLOR]','tv',36,guide,fanart,'')
     tools.addDir('[COLOR white]Reboot iVue TV Guide[/COLOR]','url',20,guide,fanart,'')
+    tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
+
+
+def extras():
+    tools.addDir('[COLOR white]Create a Short M3U & EPG URL[/COLOR]','url',17,icon,fanart,'')
+    tools.addDir('[COLOR white]Run a Speed Test[/COLOR]','ST',10,speed,fanart,'')
     tools.addDir('[COLOR white]Clear Cache[/COLOR]','CC',10,cache,fanart,'')
     
 def settingsmenu():
@@ -1393,7 +1395,7 @@ elif mode==26:
     NFL()
     
 elif mode==27:
-    NHL()
+    Guides()
     
 elif mode==28:
     LIVE_FOOTBALL()    
