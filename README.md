@@ -11,4 +11,4 @@ The following addons are available here:
 - [__mytvpro/tvpro Repository__](master/datadir/repository.mytvpro.tvpro/repository.mytvpro.tvpro-1.0.9.zip) repository.mytvpro.tvpro v1.0.9
 
 ----
-_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``e594287``](https://github.com/mytvpro/tvpro/commit/e594287575e0d2625505498fb62c4e32cebea26c)
+_Generated with [instant-kodi-repo](https://github.com/ping/instant-kodi-repo/) from_ [``8e51b93``](https://github.com/mytvpro/tvpro/commit/8e51b9328c359a5d98b87e9d8015631e52a32e84)
